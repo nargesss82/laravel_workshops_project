@@ -30,4 +30,9 @@ class Workshop extends Model
     {
         return $this->belongsToMany(User::class,'enrollments');
     }
+
+    public function isActive():bool
+    {
+        return $this->status==='active';
+    }
 }

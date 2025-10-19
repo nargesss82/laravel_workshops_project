@@ -10,8 +10,8 @@ class User extends Authenticatable
 {
 
     use HasApiTokens,Notifiable;
-    protected $fillable = ['name','phone','role'];
-    protected $guarded = ['verification_code'];
+    protected $fillable = ['name','phone','role','code_expires_at','verification_code'];
+    //protected $guarded = ['verification_code'];
 
     public function workshopsTaught()
     {
